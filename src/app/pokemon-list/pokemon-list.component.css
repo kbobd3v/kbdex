@@ -1,0 +1,80 @@
+.pokemon-grid {
+    display: grid;
+    grid-gap: 16px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+}
+.pokemon-grid .card {
+    width: 100%;
+    display: grid;
+    position: relative;
+    padding: 30px 20px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.pokemon-grid .card img {
+    max-width: 180px;
+    width: 180px;
+    max-height: 200px;
+    display: block;
+    position: relative;
+    margin: 20px auto;
+}
+
+.container {
+    width: 300px;
+    display: grid;
+    position: relative;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+pagination-controls {
+    text-align: center;
+}
+.hp {
+    width: 80px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 30px;
+    margin-left: auto;
+    font-weight: 400;
+}
+
+.types {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0 40px 0;
+}
+
+.hp span,
+.types span {
+    Font-Size: 12px;
+    Letter-Spacing: 0.4px;
+    Font-Weight: 600;
+}
+
+.types span {
+    Padding: 5px 20px;
+    Border-Radius: 20px;
+    Color: #Ffffff;
+}
+.poke-name {
+    Text-Align: Center;
+    Font-Weight: 600;
+}
+.stats {
+    Display: Flex;
+    Align-Items: Center;
+    Justify-Content: Space-Between;
+    Text-Align: Center;
+}
+
+.stats p {
+    Color: #404060;
+}

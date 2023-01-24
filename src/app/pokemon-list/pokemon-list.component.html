@@ -1,0 +1,27 @@
+<!-- Pokemon grid -->
+<div class="pokemon-grid">
+    <div class="container" *ngFor="let pokemon of pokemons | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalPokemons }">
+        <div class="card">
+            <p class="hp">
+                <span>HP</span>
+                {{ pokemon.stats[0].base_stat }}
+            </p>
+            <img [src]="pokemon.sprites.front_default" alt="Pokemon">
+            <h2 class="poke-name">{{ pokemon.name }}</h2>
+            <div Class="types">
+                <span> {{ pokemon.types[0].type.name }}</span>
+            </div>
+            <div class="stats">
+                <div>
+                    <h3>{{ pokemon.stats[1].base_stat }}</h3>
+                    <p>Power</p>
+                </div>
+                <div>
+                    <h3>{{ pokemon.height }}</h3>
+                    <p>Height</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<pagination-controls (pageChange)="page = $event; pokemons = []; getPokemons()"></pagination-controls>
